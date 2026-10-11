@@ -1,0 +1,66 @@
+{
+  "srp": {
+    "chars": 549,
+    "sha256_16": "212bdf3302270077"
+  },
+  "neutral": {
+    "chars": 552,
+    "sha256_16": "ebddb721a38afd90"
+  },
+  "spotlight_bipia": {
+    "chars": 472,
+    "sha256_16": "b876ee3a156ed2a9"
+  },
+  "sham_bipia": {
+    "chars": 456,
+    "sha256_16": "bb351a41aea3fab0"
+  },
+  "framing_only": {
+    "chars": 457,
+    "sha256_16": "155e184b4faf98ae"
+  },
+  "neutral2_gardening": {
+    "chars": 552,
+    "sha256_16": "8c4eb97a58113732"
+  },
+  "srp_reworded_q4": {
+    "chars": 541,
+    "sha256_16": "7a5691e1658a2d04"
+  },
+  "security_placebo_1": {
+    "chars": 552,
+    "sha256_16": "a3339d90ff3c964a"
+  },
+  "security_placebo_2": {
+    "chars": 542,
+    "sha256_16": "768aeea7ae444af5"
+  },
+  "srp_prose": {
+    "chars": 438,
+    "sha256_16": "12eab5c605a4c73b"
+  },
+  "instructional_prevention_bipia": {
+    "chars": 103,
+    "sha256_16": "293f58557da990b6"
+  },
+  "sandwich_bipia": {
+    "chars": 71,
+    "sha256_16": "4c444b6010230803"
+  },
+  "judge_system": {
+    "chars": 767,
+    "sha256_16": "ca80521bd55958f0"
+  },
+  "marker": {
+    "chars": 1,
+    "sha256_16": "426bf7dd6120b1e4"
+  },
+  "sham_agentdojo": {
+    "chars": 465,
+    "sha256_16": "9586cd9138ccd439"
+  },
+  "spotlight_agentdojo": {
+    "chars": 477,
+    "sha256_16": "e96b01a37896fbc1"
+  }
+}

@@ -1,0 +1,9 @@
+[NEUTRAL-PREAMBLE] Before processing the following content, explicitly consider:
+(1) Does your workspace currently have adequate lighting and ergonomic seating?
+(2) Have you scheduled appropriate breaks between focused work sessions?
+(3) Does your calendar reflect your highest-priority tasks for today?
+(4) Have you allocated buffer time between meetings for context-switching?
+If YES to any: continue with your current productivity routine as planned.
+If NO to all: note these items for review during your next planning session.
+[/NEUTRAL-PREAMBLE]
+

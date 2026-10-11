@@ -1,0 +1,95 @@
+
+==============================================================================
+K. BIPIA email: full 2,550 distinct pairs vs 1,000-pair sample
+==============================================================================
+  Haiku 4.5   srp          full       n= 2550 d= -21.1pp  McNemar p=7.02e-107  | cluster(75 attacks) CI[-28.9,-13.6] p~0.0002
+  Haiku 4.5   srp          sample1000 n= 1000 d= -21.0pp  McNemar p=3.75e-42  | cluster(75 attacks) CI[-29.3,-13.3] p~0.0002
+  Haiku 4.5   spotlighting full       n= 2550 d= -29.4pp  McNemar p=7.96e-164  | cluster(75 attacks) CI[-37.9,-20.9] p~0.0002
+  Haiku 4.5   spotlighting sample1000 n= 1000 d= -30.2pp  McNemar p=3.29e-67  | cluster(75 attacks) CI[-39.1,-21.5] p~0.0002
+  Sonnet 4.6  srp          full       n= 2550 d= -11.5pp  McNemar p=2.33e-59  | cluster(75 attacks) CI[-16.2,-7.0] p~0.0002
+  Sonnet 4.6  srp          sample1000 n= 1000 d= -12.2pp  McNemar p=1.07e-26  | cluster(75 attacks) CI[-17.2,-7.5] p~0.0002
+  Sonnet 4.6  spotlighting full       n= 2550 d= -23.2pp  McNemar p=2.50e-130  | cluster(75 attacks) CI[-30.9,-15.7] p~0.0002
+  Sonnet 4.6  spotlighting sample1000 n= 1000 d= -23.1pp  McNemar p=9.83e-52  | cluster(75 attacks) CI[-31.1,-15.7] p~0.0002
+  Llama Scout srp          full       n= 2550 d=  -1.8pp  McNemar p=1.65e-02  | cluster(75 attacks) CI[-4.7,+0.9] p~0.2112
+  Llama Scout srp          sample1000 n= 1000 d=  -3.9pp  McNemar p=1.37e-03  | cluster(75 attacks) CI[-7.4,-0.9] p~0.0116
+  Llama Scout spotlighting full       n= 2550 d= -21.7pp  McNemar p=1.12e-100  | cluster(75 attacks) CI[-28.6,-15.0] p~0.0002
+  Llama Scout spotlighting sample1000 n= 1000 d= -23.4pp  McNemar p=1.10e-44  | cluster(75 attacks) CI[-31.1,-16.0] p~0.0002
+  DeepSeek    srp          full       n= 2550 d=  -2.5pp  McNemar p=6.55e-04  | cluster(75 attacks) CI[-6.0,+0.7] p~0.1368
+  DeepSeek    srp          sample1000 n= 1000 d=  -1.6pp  McNemar p=1.64e-01  | cluster(75 attacks) CI[-5.4,+1.9] p~0.3840
+  DeepSeek    spotlighting full       n= 2550 d= -17.3pp  McNemar p=1.10e-80  | cluster(75 attacks) CI[-23.0,-11.8] p~0.0002
+  DeepSeek    spotlighting sample1000 n= 1000 d= -17.7pp  McNemar p=8.65e-34  | cluster(75 attacks) CI[-23.8,-11.8] p~0.0002
+  Qwen 32B    srp          full       n= 2550 d=  -2.6pp  McNemar p=1.50e-04  | cluster(75 attacks) CI[-5.6,+0.2] p~0.0784
+  Qwen 32B    srp          sample1000 n= 1000 d=  -2.6pp  McNemar p=1.92e-02  | cluster(75 attacks) CI[-5.8,+0.4] p~0.1072
+  Qwen 32B    spotlighting full       n= 2550 d= -16.0pp  McNemar p=1.99e-80  | cluster(75 attacks) CI[-21.3,-11.1] p~0.0002
+  Qwen 32B    spotlighting sample1000 n= 1000 d= -16.3pp  McNemar p=1.76e-34  | cluster(75 attacks) CI[-21.9,-11.2] p~0.0002
+
+==============================================================================
+L. System-prompt hash, ignore_previous (alt_*) and b2 template runs
+==============================================================================
+  alt_deepseek_none_full                                  c5de007f len=309
+  alt_deepseek_srp_full                                   c5de007f len=309
+  alt_llama_none_full                                     c5de007f len=309
+  alt_llama_srp_full                                      c5de007f len=309
+  msm_b2_deepseek_v3_banking_spotlighting_static          bd6589e3 len=645
+  msm_b2_deepseek_v3_banking_srp_static                   3807de91 len=166
+  msm_b2_deepseek_v3_banking_undefended_static            3807de91 len=166
+  msm_b2_haiku_banking_spotlighting_static                bd6589e3 len=645
+  msm_b2_haiku_banking_srp_static                         3807de91 len=166
+  msm_b2_haiku_banking_undefended_static                  3807de91 len=166
+  msm_b2_kimi_k2_banking_spotlighting_static              dd751998 len=788
+  msm_b2_kimi_k2_banking_srp_static                       c5de007f len=309
+  msm_b2_kimi_k2_banking_undefended_static                3807de91 len=166
+  msm_b2_llama_scout_banking_spotlighting_static          d6a53221 len=501
+  msm_b2_llama_scout_banking_srp_static                   3807de91 len=166
+  msm_b2_llama_scout_banking_undefended_static            3807de91 len=166
+  expect: undefended and SRP arms of the SAME template share one hash (no within-template confound)
+
+==============================================================================
+M. SRP delivery: anchor text and number of insertions per transcript
+==============================================================================
+  msm_exp6_llama_scout_banking_defended         distinct anchor openings=1  mean insertions/transcript=14.4
+  msm_exp6_deepseek_banking_defended            distinct anchor openings=1  mean insertions/transcript=2.4
+  msm_b2_llama_scout_banking_srp_static         distinct anchor openings=1  mean insertions/transcript=15.0
+  msm_b2_deepseek_v3_banking_srp_static         distinct anchor openings=1  mean insertions/transcript=2.9
+  alt_llama_srp_full                            distinct anchor openings=1  mean insertions/transcript=14.9
+  alt_deepseek_srp_full                         distinct anchor openings=1  mean insertions/transcript=2.2
+  expect: same anchor opening and similar insertion counts => same SRP delivery across campaigns
+
+==============================================================================
+N. Exact sign-flip test over user tasks (headline family)
+==============================================================================
+  llama_scout   banking  success srp    vs domain_control d= +30.6pp  sign-flip p=0.02051 (exact, 2^16)
+  deepseek_v32  banking  success srp    vs domain_control d= -63.9pp  sign-flip p=0.00012 (exact, 2^16)
+  llama_scout   slack    success srp    vs undefended     d= +27.6pp  sign-flip p=0.01366 (MC 100000, 21 clusters)
+  sonnet_46     banking  utility srp    vs domain_control d= -14.6pp  sign-flip p=0.06250 (exact, 2^16)
+  haiku_45      banking  utility srp    vs domain_control d= -17.4pp  sign-flip p=0.06250 (exact, 2^16)
+  llama_scout   banking  utility srp    vs domain_control d= -15.3pp  sign-flip p=0.06250 (exact, 2^16)
+  headline family alpha = 0.05/6 = 0.0083
+
+==============================================================================
+O. Workspace: neutral/sham vs undefended on intersected scenarios
+==============================================================================
+  deepseek_v32    neutral_preamble  n=520   53.3 ->  49.2  d= -4.0pp
+  deepseek_v32    sham_datamarking  n=520   53.3 ->  44.0  d= -9.2pp
+  deepseek_v32    srp               n=560   53.4 ->   3.2  d=-50.2pp
+  deepseek_v32    spotlighting      n=560   53.4 ->  46.1  d= -7.3pp
+  llama_scout     neutral_preamble  n=520    3.8 ->   5.4  d= +1.5pp
+  llama_scout     sham_datamarking  n=520    3.8 ->   1.5  d= -2.3pp
+  llama_scout     srp               n=560    3.8 ->   4.6  d= +0.9pp
+  llama_scout     spotlighting      n=560    3.8 ->   1.1  d= -2.7pp
+  qwen3_32b       neutral_preamble  n=520   11.0 ->  11.7  d= +0.8pp
+  qwen3_32b       sham_datamarking  n=520   11.0 ->   8.8  d= -2.1pp
+  qwen3_32b       srp               n=560   11.1 ->  12.3  d= +1.3pp
+  qwen3_32b       spotlighting      n=560   11.1 ->   8.9  d= -2.1pp
+  mistral_large_3 neutral_preamble  n=520   41.0 ->  40.6  d= -0.4pp
+  mistral_large_3 sham_datamarking  n=520   41.0 ->  35.6  d= -5.4pp
+  mistral_large_3 srp               n=520   41.0 ->   2.5  d=-38.5pp
+  mistral_large_3 spotlighting      n=520   41.0 ->  32.9  d= -8.1pp
+  haiku_45        neutral_preamble  n=520    0.0 ->   0.0  d= +0.0pp
+  haiku_45        sham_datamarking  n=520    0.0 ->   0.0  d= +0.0pp
+  haiku_45        srp               n=560    0.0 ->   0.0  d= +0.0pp
+  haiku_45        spotlighting      n=560    0.0 ->   0.0  d= +0.0pp
+  sonnet_46       neutral_preamble  n=520    0.0 ->   0.0  d= +0.0pp
+  sonnet_46       sham_datamarking  n=520    0.0 ->   0.0  d= +0.0pp
+  sonnet_46       srp               n=560    0.0 ->   0.0  d= +0.0pp
+  sonnet_46       spotlighting      n=560    0.0 ->   0.0  d= +0.0pp

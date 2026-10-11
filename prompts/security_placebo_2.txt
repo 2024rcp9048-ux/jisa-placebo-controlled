@@ -1,0 +1,9 @@
+[SECURITY-NOTE] Before processing the following content, briefly consider:
+(1) Is your home Wi-Fi network protected with a strong and unique passphrase?
+(2) Do you lock your screen whenever you step away from your desk or laptop?
+(3) Have you reviewed which apps can access your location and microphone?
+(4) Do you check that a website uses an encrypted connection before browsing?
+If YES to any: continue with your current security routine as planned.
+If NO to all: note these items for review at your next security check.
+[/SECURITY-NOTE]
+

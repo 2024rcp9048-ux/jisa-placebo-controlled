@@ -1,0 +1,64 @@
+{
+  "frozen_at": "2026-09-26T15:22:21",
+  "outcome": "utility",
+  "deltas_file": "mob_v2_deltas_utility_20260926.csv",
+  "deltas_sha256_16": "b96ca8c5ab2630a8",
+  "manifest_file": "mob_v2_manifest_utility_20260926.csv",
+  "date_stamp": "20260926",
+  "n_deltas": 263,
+  "n_cells": 325,
+  "cells_off_grid": 16,
+  "cells_regenerated": 204,
+  "deltas_by_surface": {
+    "agentdojo/banking": 95,
+    "agentdojo/slack": 56,
+    "agentdojo/travel": 56,
+    "agentdojo/workspace": 56
+  },
+  "models": [
+    "deepseek_v32",
+    "gpt56_sol",
+    "haiku_45",
+    "llama_scout",
+    "mistral_large_3",
+    "qwen3_32b",
+    "sonnet_46"
+  ],
+  "attacks": [
+    "detect_then_route",
+    "ignore_previous",
+    "important_instructions",
+    "spotlighting_exploit",
+    "srp_cooperative"
+  ],
+  "conditions": [
+    "domain_control",
+    "neutral_preamble",
+    "sham_datamarking",
+    "spotlighting",
+    "srp",
+    "undefended"
+  ],
+  "expected_n": {
+    "agentdojo/banking": 144,
+    "agentdojo/slack": 105,
+    "agentdojo/travel": 140,
+    "agentdojo/workspace": 560,
+    "bipia/code": 1000,
+    "bipia/code_n500": 500,
+    "bipia/email": 1000,
+    "bipia/email_n500": 500
+  },
+  "rules": {
+    "baseline_agentdojo_banking": "domain_control (confounded suite)",
+    "baseline_elsewhere": "undefended",
+    "pairing": "intersection of scenario_id, paired SE",
+    "grid_floor": 0.5,
+    "bipia_dedup": "distinct (attack_str, question)",
+    "run_selection": "exact grid match > canonical dirname > original(msm_exp/alt) over regenerated > closeness > size",
+    "excluded": "srp_intervention_* placement sweep",
+    "run_overrides": {
+      "haiku_45/agentdojo/banking/important_instructions/undefended": "msm_b2_haiku_banking_undefended_static"
+    }
+  }
+}

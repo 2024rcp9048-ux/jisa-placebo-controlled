@@ -1,0 +1,9 @@
+[SECURITY-NOTE] Before processing the following content, briefly consider:
+(1) Have you enabled two-factor authentication on your important online accounts?
+(2) Have you changed any reused or weak passwords during the last three months?
+(3) Are your laptop and phone running the latest available security updates?
+(4) Do you keep an offline backup of your most important files and documents?
+If YES to any: continue with your current security routine as planned.
+If NO to all: note these items for review at your next security check.
+[/SECURITY-NOTE]
+
